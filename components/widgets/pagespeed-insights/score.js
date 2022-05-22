@@ -49,7 +49,7 @@ export default class PageSpeedInsightsScore extends Component {
     ].join('&')
 
     try {
-      const res = await fetch(`https://www.googleapis.com/pagespeedonline/v2/runPagespeed?${searchParams}`)
+      const res = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?key=AIzaSyBucpHuvbFKnn55RU5jkxjyCo6CxylKc10&${searchParams}`)
       const json = await res.json()
 
       this.setState({ error: false, loading: false, score: json.ruleGroups.SPEED.score })

@@ -53,7 +53,7 @@ export default class PageSpeedInsightsStats extends Component {
     ].join('&')
 
     try {
-      const res = await fetch(`https://www.googleapis.com/pagespeedonline/v2/runPagespeed?${searchParams}`)
+      const res = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?key=AIzaSyBucpHuvbFKnn55RU5jkxjyCo6CxylKc10&${searchParams}`)
       const json = await res.json()
 
       const pageStats = json.pageStats
